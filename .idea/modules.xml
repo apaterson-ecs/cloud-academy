@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/intelliflo/apaterson-k8s-node-replacement/.idea/apaterson-k8s-node-replacement.iml" filepath="$USER_HOME$/intelliflo/apaterson-k8s-node-replacement/.idea/apaterson-k8s-node-replacement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cloud-academy.iml" filepath="$PROJECT_DIR$/.idea/cloud-academy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cloudbasics/.idea/cloudbasics.iml" filepath="$PROJECT_DIR$/../cloudbasics/.idea/cloudbasics.iml" />
+      <module fileurl="file://$USER_HOME$/intelliflo/terraform-intelligent-office/.idea/terraform-intelligent-office.iml" filepath="$USER_HOME$/intelliflo/terraform-intelligent-office/.idea/terraform-intelligent-office.iml" />
+    </modules>
+  </component>
+</project>
