@@ -3,19 +3,19 @@ data "http" "myip" {
 }
 
 resource "aws_security_group" "day01" {
-  vpc_id      = aws_default_vpc.default.id
+  vpc_id      = aws_vpc.vpc.id
   description = "Security Groups for Lab 01"
 
   egress {
     from_port   = 443
-    protocol    = "HTTPS"
+    protocol    = "tcp"
     to_port     = 443
     cidr_blocks = [var.internet_cidr]
   }
 
   egress {
     from_port   = 80
-    protocol    = "HTTP"
+    protocol    = "tcp"
     to_port     = 80
     cidr_blocks = [var.internet_cidr]
   }
@@ -59,14 +59,14 @@ resource "aws_security_group" "windows" {
 
   egress {
     from_port   = 443
-    protocol    = "HTTPS"
+    protocol    = "tcp"
     to_port     = 443
     cidr_blocks = [var.internet_cidr]
   }
 
   egress {
     from_port   = 80
-    protocol    = "HTTP"
+    protocol    = "tcp"
     to_port     = 80
     cidr_blocks = [var.internet_cidr]
   }

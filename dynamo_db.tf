@@ -1,6 +1,8 @@
 resource "aws_dynamodb_table" "acad" {
-  hash_key = "Artist"
-  name = "Terraform-Music"
+  hash_key       = "Artist"
+  name           = "Terraform-Music"
+  write_capacity = 10
+  read_capacity  = 10
 
   attribute {
     name = "Artist"
@@ -8,15 +10,15 @@ resource "aws_dynamodb_table" "acad" {
   }
 
   tags = {
-    Name = "Terraform-Music"
+    Name   = "Terraform-Music"
     Course = "CloudBasics"
   }
 }
 
 resource "aws_dynamodb_table_item" "acad-item" {
   table_name = aws_dynamodb_table.acad.name
-  hash_key = aws_dynamodb_table.acad.hash_key
-  item = <<ITEM
+  hash_key   = aws_dynamodb_table.acad.hash_key
+  item       = <<ITEM
 {
   "Artist": {"S": "Queen"},
   "SongTitle": {"S": "Bohemian Rhapsody"},

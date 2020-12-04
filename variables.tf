@@ -21,8 +21,16 @@ variable "subnet_cidr_data" {
   default = "10.1.3.0/24"
 }
 
+variable "subnet_cidr_data_b" {
+  default = "10.1.4.0/24"
+}
+
 variable "subnet_az" {
   default = "eu-west-1a"
+}
+
+variable "subnet_az_b" {
+  default = "eu-west-1b"
 }
 
 variable "internet_cidr" {

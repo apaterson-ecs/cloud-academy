@@ -2,14 +2,14 @@ data "template_file" "linux_user_data" {
   template = "${path.module}/files/linus-userdata.sh"
 }
 
-resource "aws_key_pair" "example" {
-  public_key = ""
-}
+//resource "aws_key_pair" "example" {
+//  public_key = ""
+//}
 
 resource "aws_instance" "day01_linux" {
   ami                         = data.aws_ami.amazon-linux2.id
   instance_type               = var.instance_type
-  subnet_id                   = aws_default_subnet.default_sn_az1.id
+  subnet_id                   = aws_subnet.web_subnet.id
   vpc_security_group_ids      = [aws_security_group.day01.id]
   user_data                   = data.template_file.linux_user_data.rendered
   key_name                    = aws_key_pair.generated_key.key_name
